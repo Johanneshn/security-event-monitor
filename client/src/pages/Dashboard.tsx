@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
 import { useQuery, gql } from '@apollo/client';
 import EventTable, { type Event } from '../components/EventTable';
+// In the import section
+import EventsPerDayBarChart from '../components/EventsPerDayBarChart';
+
 
 const GET_EVENTS = gql`
   query GetEvents($severity: String, $type: String) {
@@ -74,7 +77,10 @@ const Dashboard = () => {
         ) : error ? (
           <p className="text-center text-red-400">Error loading events.</p>
         ) : (
-          <EventTable events={data.events as Event[]} />
+          <>
+            <EventsPerDayBarChart events={data.events as Event[]} />
+            <EventTable events={data.events as Event[]} />
+          </>
         )}
       </div>
     </div>

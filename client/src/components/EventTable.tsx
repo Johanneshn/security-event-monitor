@@ -1,4 +1,3 @@
-import React from 'react';
 
 export type Event = {
   id: string;
@@ -12,7 +11,7 @@ type EventTableProps = {
   events: Event[];
 };
 
-const EventTable: React.FC<EventTableProps> = ({ events }) => {
+const EventTable = ({ events }: EventTableProps) => {
   return (
     <div className="overflow-x-auto">
       <table className="min-w-full bg-gray-900 border border-gray-700 rounded-lg shadow-md">

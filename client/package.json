@@ -11,6 +11,10 @@
   },
   "dependencies": {
     "@apollo/client": "^3.13.8",
+    "@elastic/charts": "^70.0.1",
+    "@elastic/eui": "^102.1.0",
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.0",
     "@tailwindcss/vite": "^4.1.6",
     "react": "^19.1.0",
     "react-dom": "^19.1.0"
